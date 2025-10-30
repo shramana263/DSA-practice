@@ -26,7 +26,7 @@ public class ContainerWaterOpt {
 
     public static void main(String[] args){
         int[] height={1,8,6,2,5,4,8,3,7};
-        ContainerWater containerWater=new ContainerWater();
+        ContainerWaterOpt containerWater=new ContainerWaterOpt();
         System.out.println(containerWater.maxArea(height));
     }
 }
