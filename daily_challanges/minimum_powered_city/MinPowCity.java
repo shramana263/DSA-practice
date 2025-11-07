@@ -1,3 +1,6 @@
+
+import java.util.Arrays;
+
 public class MinPowCity {
     private long[] prefixSum;           // Prefix sum array for power stations
     private long[] differenceArray;     // Difference array for range updates
