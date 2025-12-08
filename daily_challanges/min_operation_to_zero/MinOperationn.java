@@ -1,7 +1,7 @@
 
 import java.util.Stack;
 
-public class MinOperation{
+public class MinOperationn{
     public int minOperations(int[] nums) {
         Stack<Integer> stack= new Stack<>();
         int count =0;
@@ -20,7 +20,7 @@ public class MinOperation{
     }
     public static void main(String[] args){
         int[] nums={0,2};
-        MinOperation obj = new MinOperation();
+        MinOperationn obj = new MinOperationn();
         System.out.println(obj.minOperations(nums));
     }
 }
