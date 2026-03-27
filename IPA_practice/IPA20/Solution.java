@@ -54,6 +54,7 @@ public class Solution {
                 System.out.println(o.getId());
             }
         }
+        sc.close();
     }
 
     public static double findAvgEnginePriceByType(Engine[] eng, String type){
