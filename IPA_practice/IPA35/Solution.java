@@ -48,36 +48,13 @@ public class Solution {
         sc.close();
     }
 
-    public static Car[] RemoveAndRearrange(Car[] car, int id){
-        Car[] obj= new Car[0];
-        for(Car c:car){
-            if(c.getId()!=id){
-                obj=Arrays.copyOf(obj,obj.length+1);
-                obj[obj.length-1]=c;
-            }
-        }
-        if(obj.length<1){
-            return null;
-        }
-
-        return obj;
-    }
     // public static Car[] RemoveAndRearrange(Car[] car, int id){
     //     Car[] obj= new Car[0];
-    //     int curr, prev;
-    //     int i=0;
-    //     while(car[i].getId()!=id){
-    //         obj=Arrays.copyOf(obj,obj.length+1);
-    //         obj[obj.length-1]=car[i];
-    //         i++;
-    //     }
-    //     prev=car[i].getId();
-    //     for(int j=i+1;j<car.length;j++){
-    //         obj=Arrays.copyOf(obj,obj.length+1);
-    //         obj[obj.length-1]=car[j];
-    //         curr=car[j].getId();
-    //         obj[obj.length-1].setId(prev);
-    //         prev=curr;
+    //     for(Car c:car){
+    //         if(c.getId()!=id){
+    //             obj=Arrays.copyOf(obj,obj.length+1);
+    //             obj[obj.length-1]=c;
+    //         }
     //     }
     //     if(obj.length<1){
     //         return null;
@@ -85,4 +62,27 @@ public class Solution {
 
     //     return obj;
     // }
+    public static Car[] RemoveAndRearrange(Car[] car, int id){
+        Car[] obj= new Car[0];
+        int curr, prev;
+        int i=0;
+        while(car[i].getId()!=id){
+            obj=Arrays.copyOf(obj,obj.length+1);
+            obj[obj.length-1]=car[i];
+            i++;
+        }
+        prev=car[i].getId();
+        for(int j=i+1;j<car.length;j++){
+            obj=Arrays.copyOf(obj,obj.length+1);
+            obj[obj.length-1]=car[j];
+            curr=car[j].getId();
+            obj[obj.length-1].setId(prev);
+            prev=curr;
+        }
+        if(obj.length<1){
+            return null;
+        }
+
+        return obj;
+    }
 }
