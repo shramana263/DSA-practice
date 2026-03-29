@@ -43,9 +43,6 @@ Petrol
 1005
 Truck
 Diesel
-1006
-Truck12
-Diesel12
 1003
 
 Output :
