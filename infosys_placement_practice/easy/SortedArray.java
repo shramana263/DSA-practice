@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public class SortedArray {
     // Given an array arr[], check whether it is sorted in non-decreasing order. Return true if it is sorted otherwise false.
 
@@ -11,15 +9,5 @@ public class SortedArray {
             }
         }
         return true;
-    }
-
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        int n= sc.nextInt();
-        int[] arr= new int[n];
-        for(int i=0;i<n;i++){
-            arr[i]= sc.nextInt();
-        }
-        
     }
 }
